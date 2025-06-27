@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Housing Market Trends Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {font-family: "Times New Roman", Georgia, Serif;}
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Visualizing</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#dashboards" class="w3-bar-item w3-button">Dashboards</a>
+      <a href="#team" class="w3-bar-item w3-button">Team</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <div class="w3-display-middle w3-padding-large">
+    <h1 class="w3-xxlarge">Visualizing</h1>
+    <h5>An Analysis of Sale Price and features</h5>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px; margin-top:100px;">
+
+  <!-- Dashboards Section -->
+  <div class="w3-row w3-padding-64" id="dashboards">
+    <div class="w3-col m12 w3-padding-large">
+      <h1 class="w3-center">📊 Embedded Tableau Dashboard</h1><br>
+
+      <!-- Tableau Embed -->
+      <div class='tableauPlaceholder' id='viz1719405821356' style='position: relative; margin-bottom: 40px;'>
+        <noscript><a href='https://public.tableau.com/views/dashboard_17508515361180/Dashboard1?publish=yes'>
+          <img alt='Dashboard' src='https://public.tableau.com/static/images/da/dashboard_17508515361180/Dashboard1/1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='dashboard_17508515361180/Dashboard1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/da/dashboard_17508515361180/Dashboard1/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1719405821356');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = '100%';
+            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        } else {
+            vizElement.style.width = '100%';
+            vizElement.style.height = '1500px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Team Section -->
+  <div class="w3-container w3-padding-64" id="team">
+    <h1 class="w3-center">Our Team</h1><br>
+    <div class="w3-col m12 w3-padding-large w3-center">
+      <p class="w3-large">
+        <b>Team Leader:</b> T. Nikhitha Reddy<br>
+        <b>Member 1:</b> K. Tejaswini<br>
+        <b>Member 2:</b> Y. Mahidhar Reddy<br>
+        <b>Member 3:</b> P. Arshiya
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Visualizing Housing Market Trends: An Analysis of Sale Price and features.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+body {
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    margin: 0;
+    background-color: #0a0a1a;
+    color: #e0e0ff;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, #0a0a1a, #1a1a3a);
+}
+
+/* Navbar styling with neon effect */
+.w3-bar {
+    background-color: rgba(10, 10, 26, 0.8) !important;
+    border-bottom: 2px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.w3-bar-item {
+    color: #0ff !important;
+    text-shadow: 0 0 5px #0ff;
+    transition: all 0.3s ease;
+}
+
+.w3-bar-item:hover {
+    background-color: #0ff !important;
+    color: #0a0a1a !important;
+    text-shadow: 0 0 10px #fff;
+    transform: scale(1.05);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 100px;
+    background: linear-gradient(45deg, #1a1a3a, #0a0a1a);
+    border-bottom: 1px solid #0ff;
+    animation: headerGlow 5s infinite alternate;
+}
+
+@keyframes headerGlow {
+    0% { box-shadow: 0 0 10px #0ff; }
+    50% { box-shadow: 0 0 20px #f0f; }
+    100% { box-shadow: 0 0 10px #0ff; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    letter-spacing: 3px !important;
+    font-family: 'Orbitron', 'Playfair Display', serif !important;
+}
+
+h1 {
+    animation: textFlicker 3s infinite alternate;
+}
+
+@keyframes textFlicker {
+    0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+    50% { text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 15px #f0f; }
+    100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+}
+
+/* Dashboard containers */
+.tableauPlaceholder {
+    border: 1px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+    animation: borderPulse 4s infinite alternate;
+}
+
+@keyframes borderPulse {
+    0% { box-shadow: 0 0 10px #0ff; }
+    50% { box-shadow: 0 0 20px #f0f; }
+    100% { box-shadow: 0 0 10px #0ff; }
+}
+
+.tableauPlaceholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #f0f;
+}
+
+iframe {
+    border: 1px solid #0ff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+img {
+    margin: 20px 0;
+    border: 1px solid #0ff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+
+/* Team section */
+#team {
+    background-color: rgba(10, 10, 26, 0.5);
+    border-top: 1px solid #0ff;
+    border-bottom: 1px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+}
+
+#team p {
+    line-height: 2;
+    text-shadow: 0 0 5px #0ff;
+}
+
+#team b {
+    color: #f0f;
+    text-shadow: 0 0 5px #f0f;
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(10, 10, 26, 0.8) !important;
+    border-top: 2px solid #0ff;
+    box-shadow: 0 0 15px #0ff;
+    color: #0ff !important;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* Add a circuit board pattern overlay */
+.w3-content {
+    position: relative;
+}
+
+.w3-content::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5" d="M10,10L90,10L90,90L10,90Z"/><path fill="none" stroke="rgba(0,255,255,0.1)" stroke-width="0.5" d="M30,10L30,90M50,10L50,90M70,10L70,90M10,30L90,30M10,50L90,50M10,70L90,70"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Add some glowing dots */
+.w3-content::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0,255,255,0.3) 1px, transparent 1px), 
+                      radial-gradient(circle, rgba(255,0,255,0.2) 1px, transparent 1px);
+    background-size: 30px 30px, 50px 50px;
+    background-position: 0 0, 15px 15px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+    animation: dotMove 60s linear infinite;
+}
+
+@keyframes dotMove {
+    0% { background-position: 0 0, 15px 15px; }
+    100% { background-position: 100px 100px, 115px 115px; }
+}
+
+/* Add a custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0ff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0ff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #f0f;
+    box-shadow: 0 0 5px #f0f;
+}
